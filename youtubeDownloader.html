@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="youtubeDownloader.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download YouTube Videos</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <a class="navbar-brand d-flex" href="#">
+            <img src="https://res.cloudinary.com/dugs6k8rw/image/upload/v1724572104/icon-removebg-preview_eqegkh.png" class="logo" />
+            <h6 style="font-size: 33px;font-family: 'Roboto';font-weight: bold;" class="mt-3 ml-2">YouLoad</h6>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-link active" href="#"><b>Home</b> <span class="sr-only">(current)</span></a>
+                <a class="nav-link active" href="#"><b>About Us</b></a>
+                <a class="nav-link active" href="#Section-2"><b>Help</b></a>
+            </div>
+        </div>
+    </nav><hr/>
+    <div class="background">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb-4 mt-5">
+                    <h3 class="text-center" style="font-family: 'Bree Serif';">Download Youtube Videos</h3>
+                    <p class="text-center" style="font-family: 'Roboto';">Download and enjoy the perfect form of entertainment and content given by the youtube.</p>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <form id="downloadForm">
+                        <label for="link" style="font-size: 18px;font-weight: 500;">YouTube Channel Link :</label><br>
+                        <input type="text" id="link" name="link" required class="form-control input-box p-4">
+                        <br>
+
+                        <label for="num_videos" style="font-size: 18px;font-weight: 500;">Number of Videos :</label><br>
+                        <input type="number" id="num_videos" name="num_videos" required class="form-control input-box p-4">
+                        <br><br>
+                        
+                        <center><button type="submit" class="btn but">Download</button></center>
+                    </form>
+                    <div id="status"></div>
+                </div>
+            </div>
+            <div class="row mt-5" id="Section-2">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4 mb-4">
+                    <p class="para"><span class="step">Step-1: </span>Enter the channel link that you want to download from.</p>
+                    <img src="https://res.cloudinary.com/dugs6k8rw/image/upload/v1724576422/Screenshot_32_k3w2ws.png" class="w-100"/>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4 mb-4">
+                    <p class="para"><span class="step">Step-2: </span>Enter number of videos that you want to download.</p>
+                    <img src="https://res.cloudinary.com/dugs6k8rw/image/upload/v1724576436/Screenshot_33_unyxbt.png" class="w-100"/>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                    <p class="para"><span class="step">Step-3: </span>Click download button.</p>
+                    <img src="https://res.cloudinary.com/dugs6k8rw/image/upload/v1724576445/Screenshot_34_kzu7yc.png" class="w-100"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="youtubeDownloader.js"></script>
+</body>
+</html>
