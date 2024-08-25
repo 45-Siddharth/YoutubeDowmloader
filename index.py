@@ -15,7 +15,7 @@ app.add_middleware(
 def download_videos_from_channel(link: str = Form(...), num_videos: int = Form(...)):
     ydl_opts = {
         'format': 'bestvideo[ext=mp4]+bestaudio[ext=mp4a]/best',
-        'outtmpl': '%(title)s.%(ext)s',
+        'outtmpl': '/storage/emulated/0/Download/%(title)s.%(ext)s',
         'noplaylist': True,
         'playlistend': num_videos,
         'quiet': False,
