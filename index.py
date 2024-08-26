@@ -4,6 +4,7 @@ import os
 import tempfile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+import uvicorn
 
 app = FastAPI()
 
@@ -23,7 +24,7 @@ def download_videos_from_channel(link: str = Form(...), num_videos: int = Form(.
         temp_dir = tempfile.gettempdir()
 
         # Ensure the output template is compatible with mobile file systems
-        output_template = os.path.join(temp_dir, '/storage/emulated/0/Download/%(title)s.%(ext)s')
+        output_template = os.path.join(temp_dir, '%(title)s.%(ext)s')
 
         ydl_opts = {
             'format': 'bestvideo[ext=mp4]+bestaudio[ext=mp4a]/best',
@@ -49,6 +50,18 @@ def download_videos_from_channel(link: str = Form(...), num_videos: int = Form(.
         # Handle general errors
         print(f"An error occurred: {e}")
         raise HTTPException(status_code=500, detail="Internal Server Error")
+
+# HTTPS Configuration (Optional)
+# If you want to run the server with HTTPS, you'll need a certificate and key
+# Uncomment and configure the following section if needed
+'''
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000, ssl_keyfile="path/to/ssl.key", ssl_certfile="path/to/ssl.cert")
+'''
+
+# Running the server normally without HTTPS
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
 
 
 # from fastapi import FastAPI, HTTPException, Form
